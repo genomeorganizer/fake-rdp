@@ -8,3 +8,8 @@ This will make it so that clients trying to connect to this server via RDP will 
 This will run on both python 2 and 3
 
 `./fake_rdp.py`
+
+## Fork
+- Added wrapper shell script
+- Added service file
+- Added email support (requires addition of email.json)

@@ -1,0 +1,14 @@
+[Unit]
+Description=Fake RDP Server
+After=network.target
+StartLimitIntervalSec=10
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=bot
+ExecStart=/usr/local/bin/fake_rdp.sh
+
+[Install]
+WantedBy=multi-user.target
