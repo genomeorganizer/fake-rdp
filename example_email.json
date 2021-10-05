@@ -1,0 +1,7 @@
+{
+    "SMTPserver" : "smtp.mail.yahoo.com",
+    "sender" :     "___@yahoo.com",
+    "USERNAME" : "___",
+    "PASSWORD" : "***",
+    "to":"___@yahoo.com"
+}
