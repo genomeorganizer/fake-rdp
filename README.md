@@ -14,7 +14,7 @@ This will run on both python 2 and 3
 ## Recommended installation steps:
 1. Add your credentials to the email.json file
 2. Create a user account to run this -- recommend using the name 'bot'
-3. Copy the fun scripts to the desired location. Recommended locations:
+3. Copy the run scripts to the desired location. Recommended locations:
   - /usr/local/bin/ - traditional loccation for common unmanaged scripts
   - /home/bot/bin/ - can run under the user account folder
 4. Run as a service
