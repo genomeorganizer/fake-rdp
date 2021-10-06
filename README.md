@@ -9,6 +9,17 @@ This will run on both python 2 and 3
 
 `./fake_rdp.py`
 
+`./fake_rdp.sh` -- wrapper script
+
+## Recommended installation steps:
+1. Add your credentials to the email.json file
+2. Create a user account to run this -- recommend using the name 'bot'
+3. Copy the fun scripts to the desired location. Recommended locations:
+  - /usr/local/bin/ - traditional loccation for common unmanaged scripts
+  - /home/bot/bin/ - can run under the user account folder
+4. Run as a service
+  - Update the fake_rdp.service file and copy to your service directory (/etc/systemd/system/)
+  - `sudo systemctl enable fake_rdp`
 ## Fork
 - Added an email alert for each login attempt
 - Added wrapper shell script
