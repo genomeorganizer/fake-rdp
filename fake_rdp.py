@@ -4,6 +4,7 @@ import socket
 import time
 import json
 import os
+from getmac import get_mac_address
 
 import email_alerts
 
@@ -22,7 +23,8 @@ def fake_server():
     while True:
         try:
             connection, address = serversocket.accept()
-            msg='Recieved connection from {}'.format(address)
+            mac = get_mac_address(ip=str(address[0]))
+            msg='Recieved connection from ip: {} port: {} mac: {}'.format(address[0],address[1],mac)
             print(msg)
             connection.recv(256)
             # Init packet of an NLA-enabled RDP server
