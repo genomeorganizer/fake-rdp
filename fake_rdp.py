@@ -5,7 +5,9 @@ import time
 import json
 import os
 from getmac import get_mac_address
-
+from os.path import expanduser
+home = expanduser("~")
+default_path=os.path.join(home,".mail")
 import email_alerts
 
 def load_auth_file(filename):
@@ -15,7 +17,8 @@ def load_auth_file(filename):
 
 def fake_server():
     """Start a socket on port 3389 and send init packets"""
-    a=load_auth_file("/usr/local/bin/email.json")
+    #a=load_auth_file("/usr/local/bin/email.json")
+    a=default_path
     email_alerts.send(auth=a,to=a['to'],subject="Fake RDP Server started",message="Started fake RDP server")
     serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     serversocket.bind(('0.0.0.0', 3389))
